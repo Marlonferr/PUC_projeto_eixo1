@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Categorias — Contaí (RF-11)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../compartilhado/design-system.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <!-- Aponta para o Painel inicial (RF-01, Isaque) quando ele existir. -->
+      <a class="btn--icon" href="../../index.html" aria-label="Voltar" id="btn-voltar"></a>
+      <h1 class="t-h1">Categorias</h1>
+      <span class="spacer"></span>
+      <button class="btn--icon" data-acao="alternar-tema" type="button" aria-label="Alternar tema"></button>
+    </header>
+
+    <div class="segmented segmented--solid" id="seg-tipo" role="tablist" aria-label="Tipo de categoria">
+      <button type="button" data-tipo="despesa" aria-selected="true" role="tab">Despesas</button>
+      <button type="button" data-tipo="receita" aria-selected="false" role="tab">Receitas</button>
+    </div>
+
+    <div id="lista-categorias" style="margin-top:24px"></div>
+  </main>
+
+  <div class="action-bar">
+    <button class="btn btn--primary" id="btn-nova" type="button">
+      <span id="ic-plus"></span><span>Nova categoria</span>
+    </button>
+  </div>
+
+  <script src="../compartilhado/ui.js"></script>
+  <script src="../compartilhado/store.js"></script>
+  <script src="categorias.js"></script>
+  <script>
+    document.getElementById("btn-voltar").innerHTML = window.Contai.icon("arrow-left", 22);
+    document.getElementById("ic-plus").innerHTML = window.Contai.icon("plus", 18);
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Despesas — Contaí (RF-03)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../compartilhado/design-system.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <!-- Aponta para o Painel inicial (RF-01, Isaque) quando ele existir. -->
+      <a class="btn--icon" href="../../index.html" aria-label="Voltar" id="btn-voltar"></a>
+      <h1 class="t-h1">Despesas</h1>
+      <span class="spacer"></span>
+      <button class="btn--icon" data-acao="alternar-tema" type="button" aria-label="Alternar tema"></button>
+    </header>
+
+    <div class="month-nav">
+      <button class="btn--icon" id="mes-anterior" type="button" aria-label="Mês anterior"></button>
+      <span class="month-nav__label" id="mes-label">—</span>
+      <button class="btn--icon" id="mes-seguinte" type="button" aria-label="Próximo mês"></button>
+    </div>
+
+    <div class="total-block">
+      <div class="total-block__value text-expense" id="total-valor">− R$ 0,00</div>
+      <div class="total-block__caption" id="total-caption">—</div>
+    </div>
+
+    <div class="chips" id="chips-categoria" role="group" aria-label="Filtrar por categoria"></div>
+
+    <div id="lista-despesas"></div>
+  </main>
+
+  <div class="action-bar">
+    <button class="btn btn--primary" id="btn-nova" type="button">
+      <span id="ic-plus"></span><span>Nova despesa</span>
+    </button>
+  </div>
+
+  <script src="../compartilhado/ui.js"></script>
+  <script src="../compartilhado/store.js"></script>
+  <script src="../categorias/categorias.js"></script>
+  <script src="despesas.js"></script>
+  <script>
+    var C = window.Contai;
+    document.getElementById("btn-voltar").innerHTML = C.icon("arrow-left", 22);
+    document.getElementById("ic-plus").innerHTML = C.icon("plus", 18);
+    document.getElementById("mes-anterior").innerHTML = C.icon("chevron-left", 22);
+    document.getElementById("mes-seguinte").innerHTML = C.icon("chevron-right", 22);
+  </script>
+</body>
+</html>

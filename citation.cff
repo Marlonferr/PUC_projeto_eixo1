@@ -1,0 +1,40 @@
+message: Please cite this software using these metadata.
+
+title: Contaí
+
+authors:  
+
+  - family-names: Silva
+    given-names: Marlon Fernando de Assis
+  
+- family-names: Ribeiro
+    given-names: Isaque Gabriel
+
+  - family-names: Nogueira
+    given-names: Rainan da Silva
+
+  - family-names: Rodrigues
+    given-names: Lucas Maciel
+
+  - family-names: Maia
+    given-names: Pedro Henrique Oliveira
+
+  - family-names: Tôrres
+    given-names: Viviâne de Almeida
+    affiliation: PUC Minas
+
+keywords:
+  - finanças pessoais
+  - organização financeira
+  - controle financeiro
+  - receitas
+  - despesas
+  - orçamento
+  - planejamento financeiro
+  - dinheiro
+  - metas financeiras
+  - aplicação web
+
+repository-code:
+version: 1.0.0
+date-released: 2026-09-14
